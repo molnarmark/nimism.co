@@ -18,8 +18,15 @@ export default class HomePage extends Component {
   onChange(e) {
     let val = e.target.value
     this.setState([e.target.name]: val)
-    if (val.length >= 3) {
-      axios.get(`${IP}/search/${val}`)
+
+    clearTimeout(this.state.typeTimeout)
+    let typeTimeout = setTimeout(_ => this.apiCall(val), 500)
+    this.setState({typeTimeout})
+  }
+
+  apiCall(keyword) {
+    if (keyword.length >= 3) {
+      axios.get(`${IP}/search/${keyword}`)
         .then(resp => {
           this.setState({results: resp.data})
           if (resp.data.length > 0) this.setState({height: "120px"})
@@ -35,11 +42,11 @@ export default class HomePage extends Component {
     let results = (this.state.results.length > 0) ? <Results data={this.state.results} /> : ""
     return (
       <div className="row">
-        <div id="hero" style={{"min-height": this.state.height}}>
+        <div id="hero" style={{"minHeight": this.state.height}}>
           <p className="nimism animated fadeInDown">nimism</p>
 
           <div className="searchInputGroup">
-            <input type="text" name="keyword" autocomplete="off" onChange={this.onChange} placeholder="Start typing your keywords.." />
+            <input type="text" name="keyword" autoComplete="off" onChange={this.onChange} placeholder="Start typing your keywords.." />
             <i className="fa fa-search search" aria-hidden="true"></i>
           </div>
 
