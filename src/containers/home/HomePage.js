@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import Results from "../../components/search/Results"
 import axios from "axios"
 
-let IP = (process.env.NIMISM_ENV === "DEV") ? "http://localhost:5000" : "http://api.nimism.co:5000"
+let IP = (process.env.NODE_ENV === "development") ? "http://localhost:5000" : "http://api.nimism.co:5000"
 
 export default class HomePage extends Component {
   constructor(props) {
