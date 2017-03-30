@@ -20,7 +20,7 @@ class Card extends Component {
         </div>
         <hr />
         <div className="row">
-          <a href={this.props.url}><div className="six columns repo"><i className={this.props.method == "git"? "fa fa-github" : "fa fa-bitbucket"} aria-hidden="true"></i></div></a>
+          <a href={this.props.url}><div className="six columns repo"><i className={this.props.method === "git"? "fa fa-github" : "fa fa-bitbucket"} aria-hidden="true"></i></div></a>
           <a href={this.props.web}><div className="six columns home"><i className="fa fa-home" aria-hidden="true"></i></div></a>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import Results from "../../components/search/Results"
 import axios from "axios"
 
-let IP = (process.env.NIMISM_ENV == "DEV") ? "http://localhost:5000" : "http://api.nimism.co:5000"
+let IP = (process.env.NIMISM_ENV === "DEV") ? "http://localhost:5000" : "http://api.nimism.co:5000"
 
 export default class HomePage extends Component {
   constructor(props) {
@@ -31,7 +31,7 @@ export default class HomePage extends Component {
   }
 
   render() {
-    let isEmpty = (this.state.results.length == 0 && this.state.keyword.length > 3) ? <i className="fa fa-frown-o" aria-hidden="true"></i> : ""
+    let isEmpty = (this.state.results.length === 0 && this.state.keyword.length > 3) ? <i className="fa fa-frown-o" aria-hidden="true"></i> : ""
     let results = (this.state.results.length > 0) ? <Results data={this.state.results} /> : ""
     return (
       <div className="row">
