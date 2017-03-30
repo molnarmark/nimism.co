@@ -6,8 +6,7 @@ Keep in mind that it is really **beta**. A lot, and I mean a lot of refactoring 
 
 #### Todos
 
-- [ ] Possibly port it to [react-starter-kit](https://github.com/kriasoft/react-starter-kit)
-- [ ] Add API request delay
+- [x] Add API request delay
 - [ ] Add Google Analytics
 
 #### Developer ####
