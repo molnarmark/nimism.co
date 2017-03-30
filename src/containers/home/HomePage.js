@@ -1,12 +1,8 @@
 import React, {Component} from "react"
-import Results from "../../search/Results"
+import Results from "../../components/search/Results"
 import axios from "axios"
 
-let IP
-if (process.env.NIMISM_ENV == "DEV")
-  IP = "http://localhost:5000"
-else
-  IP = "http://api.nimism.co"
+let IP = (process.env.NIMISM_ENV == "DEV") ? "http://localhost:5000" : "http://api.nimism.co:5000"
 
 export default class HomePage extends Component {
   constructor(props) {
@@ -40,7 +36,7 @@ export default class HomePage extends Component {
     return (
       <div className="row">
         <div id="hero" style={{"min-height": this.state.height}}>
-          <p className="nimism animated fadeInDown">nimism v0.1</p>
+          <p className="nimism animated fadeInDown">nimism</p>
 
           <div className="searchInputGroup">
             <input type="text" name="keyword" autocomplete="off" onChange={this.onChange} placeholder="Start typing your keywords.." />
@@ -54,10 +50,9 @@ export default class HomePage extends Component {
             <div className="credit">Proudly Developed by <a href="http://github.com/molnarmark">Molnár Márk</a></div>
           </span>
         </div>
-        <a href="https://github.com/nimism"><img className="github-ribbon" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"/></a>
+        <a href="https://github.com/molnarmark/nimism"><img className="github-ribbon" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"/></a>
         {results}
         {isEmpty}
-        {/*<div className="credit">Developed by Molnár Márk</div>*/}
       </div>
     )
   }
