@@ -7,7 +7,8 @@ Keep in mind that it is really **beta**. A lot, and I mean a lot of refactoring 
 #### Todos
 
 - [x] Add API request delay
-- [ ] Add Google Analytics
+- [x] Add Google Analytics
+- [ ] Add parameter search support
 
 #### Developer ####
 
