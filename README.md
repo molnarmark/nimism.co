@@ -10,6 +10,9 @@ Keep in mind that it is really **beta**. A lot, and I mean a lot of refactoring 
 - [x] Add Google Analytics
 - [ ] Add parameter search support
 
+#### Contributing ####
+PRs are always welcome!
+
 #### Developer ####
 
  - Molnár Márk
