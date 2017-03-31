@@ -1,6 +1,18 @@
 import React, {Component} from "react"
 
 class Card extends Component {
+
+  // Old school but refusing to add another dependency for such simpleness
+  copyToClipboard(e) {
+    var textField = document.createElement("textarea")
+    textField.innerText = `nimble install ${this.props.title}`
+    document.body.appendChild(textField)
+    textField.select()
+    document.execCommand("copy")
+    textField.remove()
+    alert("The command was copied to your clipboard!")
+  }
+
   render() {
     return (
       <div className="card">
@@ -16,7 +28,7 @@ class Card extends Component {
         </div>
         <div className="row">
           <div className="one columns"><i className="fa fa-terminal" aria-hidden="true"></i></div>
-          <div className="eleven columns"><span className="command">nimble install {this.props.title}</span></div>
+          <div className="eleven columns"><span className="command">nimble install {this.props.title} <i onClick={this.copyToClipboard.bind(this)} className="fa fa-clipboard copyToClipboard" aria-hidden="true"></i></span></div>
         </div>
         <hr />
         <div className="row">
