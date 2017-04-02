@@ -29,6 +29,15 @@ body {
     transition: min-height 200ms ease-in-out;
 }
 
+#hero2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
 #hero .nimism {
     font-family: Elley, sans-serif;
     color: white;
@@ -159,7 +168,7 @@ body {
 .github-ribbon {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     border: 0;
 }
 
@@ -197,4 +206,35 @@ a {
     font-weight: 500;
     font-family: Roboto, sans-serif !important;
     padding: 5px !important;
+}
+
+nav {
+    position: absolute;
+    text-align: right;
+    right: 0;
+    top: 0;
+    width: 100%;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-weight: 200;
+    padding: 5px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 5px;
+    background: #4A74C7;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 100ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+nav ul li:hover {
+    background: #3E64AD;
+    cursor: pointer;
+}
+
+nav ul li a, nav ul li a:hover {
+    color: white;
+    text-decoration: none;
 }

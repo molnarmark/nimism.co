@@ -1,5 +1,6 @@
 import React, {Component} from "react"
 import Results from "../../components/search/Results"
+import NavBar from "../../components/shared/NavBar"
 import axios from "axios"
 
 let IP = (process.env.NODE_ENV === "development") ? "http://localhost:5000" : "http://api.nimism.co:5000"
@@ -42,6 +43,7 @@ export default class HomePage extends Component {
     let results = (this.state.results.length > 0) ? <Results data={this.state.results} /> : ""
     return (
       <div className="row">
+        <NavBar />
         <div id="hero" style={{"minHeight": this.state.height}}>
           <p className="nimism animated fadeInDown">nimism</p>
 
