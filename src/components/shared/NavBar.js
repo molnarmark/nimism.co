@@ -5,6 +5,7 @@ class NavBar extends Component {
     return (
       <nav>
         <ul>
+          <li><a href="http://nimism.co">Home</a></li>
           <li><a href="http://blog.nimism.co">Blog</a></li>
           <li><a href="#">About</a></li>
         </ul>
