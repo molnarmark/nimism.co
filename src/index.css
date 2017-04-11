@@ -238,3 +238,15 @@ nav ul li a, nav ul li a:hover {
     color: white;
     text-decoration: none;
 }
+
+.subpage {
+    width: 100%;
+    align-items: left !important;
+    justify-content: left !important;
+    height: 50px;
+    padding-left: 10px;
+}
+
+.subpage p {
+    font-size: 30px !important;
+}
