@@ -1,3 +1,5 @@
+# Nimism has been discontinued.
+
 ## Nimism ##
 
 Nimism is a lightweight, extremely simple Nim package search tool heavily inspired by [npms](https://github.com/npms-io).
